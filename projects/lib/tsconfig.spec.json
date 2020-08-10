@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    //TODO: removed this vvv to get back to initial state
+    //"emitDecoratorMetadata": true,
+    "outDir": "../../out-tsc/spec",
+    "rootDir": "./src",
+    "types": [
+      //"jasmine",
+      //TODO: removed this vvv added this ^^^ to get back to initial state
+      "jest",
+      "node"
+    ]
+  },
+  //TODO: added this vvv to get back to initial state
+  //"files": [
+    //"src/test.ts"
+  //],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts"
+    //TODO: removed this vvv to get back to initial state
+    //,
+    //"./jest.config.js"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    //TODO: removed this vvv to get back to initial state
+    //"esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "lib": [
+        "dist/lib"
+      ],
+      "lib/*": [
+        "dist/lib/*"
+      ]
+    }
+  },
+//   "exclude": [
+//     "**/build/**",
+//     "**/coverage/**",
+//     "**/dist/**",
+//     "**/node_modules/**"
+//   ],
+  "files": [
+    "./.eslintrc.js"
+  ],
+//TODO: removed this ^^^ and added this vvvv to get back to the initial state
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true
+    }
+}
