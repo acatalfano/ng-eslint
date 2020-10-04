@@ -10,5 +10,7 @@
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
     "guides.sendUsagesAndStats": false,
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true,
+    "prettier.packageManager": "pnpm",
+    "prettier.printWidth": 120
 }
