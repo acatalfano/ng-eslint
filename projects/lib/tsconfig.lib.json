@@ -5,8 +5,6 @@
     "target": "es2015",
     "declaration": true,
     "inlineSources": true,
-    //TODO: removed this vvv to get back to initial state
-    //"rootDir": "./src",
     "types": [],
     "lib": [
       "dom",
@@ -24,12 +22,7 @@
   "include": [
     "./src/**/*.ts"
   ],
-  //TODO: removed this to get back to initial state
-  //"include": [
-    //"./src/**/*.ts",
-    //"./.eslintrc.js"
-  //],
   "exclude": [
-    "**/*.spec.ts"
+    "**/*.spec.ts", "**/*-spec.ts"
   ]
 }

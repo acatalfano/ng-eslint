@@ -14,7 +14,7 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
-    it('should have as title \'test-app\'', () => {
+    it("should have as title 'test-app'", () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app: AppComponent = fixture.debugElement.componentInstance as AppComponent;
         expect(app.title).toEqual('test-app');
@@ -26,4 +26,11 @@ describe('AppComponent', () => {
         const compiled = fixture.debugElement.nativeElement as HTMLElement;
         expect(compiled.querySelector('.content span').textContent).toContain('test-app app is running!');
     });
+
+    // testing: i'm a long line! testing: i'm a long line! testing: i'm a long line! testing: i'm a long line! testing: i'm a long line! testing-- 150
+    // TODO: maybe see this: https://khalilstemmler.com/blogs/tooling/prettier/
+    // x and this: https://github.com/stemmlerjs/simple-typescript-starter
+    // x
+    // x
+    // OH and this!!! https://github.com/prettier/prettier-eslint-cli
 });

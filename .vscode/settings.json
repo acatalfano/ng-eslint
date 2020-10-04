@@ -1,14 +1,14 @@
 {
-  "eslint.validate": [ "javascript", "typescript", "html" ],
-  "eslint.options": {
-    "extensions": [ ".js", ".ts", "html"]
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.run": "onType",
-  "eslint.format.enable": true,
-  "eslint.lintTask.enable": true,
-  "guides.sendUsagesAndStats": false,
-  "eslint.alwaysShowStatus": true
+    "eslint.validate": ["javascript", "typescript", "html"],
+    "eslint.options": {
+        "extensions": [".js", ".ts", "html"]
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.run": "onType",
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "guides.sendUsagesAndStats": false,
+    "eslint.alwaysShowStatus": true
 }

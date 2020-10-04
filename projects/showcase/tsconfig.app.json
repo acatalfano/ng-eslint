@@ -5,31 +5,18 @@
     "target": "es2015",
     "declaration": true,
     "inlineSources": true,
-    //TODO: removed this vvv to get back to initial state
-    //"rootDir": "./src",
     "types": [],
     "lib": [
       "dom",
       "es2018"
     ]
   },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
+  "include": [
+      "src/**/*.ts"
   ],
-  // "include": [
-  //   "./src/**/*.ts"
-  //   //TODO: removed this vvv to get back to initial state
-  //   //,
-  //   //"./.eslintrc.js"
-  // ],
-  //"exclude": [
-  //   //TODO: added this (one line) vvvv to get back to initial state
-  //   "src/test.ts",
-  //   "src/**/*.spec.ts"
-  // ]
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/**/*-spec.ts"
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
@@ -39,10 +26,4 @@
     "strictInjectionParameters": true,
     "enableResourceInlining": true
   }
-  //TODO: removed this vvv to get back to initial state
-  //,
-  //"angularCompilerOptions": {
-    //"fullTemplateTypeCheck": true,
-    //"strictInjectionParameters": true
-  //}
 }

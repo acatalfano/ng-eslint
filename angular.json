@@ -3,36 +3,36 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "test-app": {
+        "showcase": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
                     "style": "scss"
                 }
             },
-            "root": "projects/test-app",
-            "sourceRoot": "projects/test-app/src",
+            "root": "projects/showcase",
+            "sourceRoot": "projects/showcase/src",
             "prefix": "test",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/test-app",
-                        "index": "projects/test-app/src/index.html",
-                        "main": "projects/test-app/src/main.ts",
-                        "polyfills": "projects/test-app/src/polyfills.ts",
-                        "tsConfig": "projects/test-app/tsconfig.app.json",
+                        "outputPath": "dist/showcase",
+                        "index": "projects/showcase/src/index.html",
+                        "main": "projects/showcase/src/main.ts",
+                        "polyfills": "projects/showcase/src/polyfills.ts",
+                        "tsConfig": "projects/showcase/tsconfig.app.json",
                         "aot": false,
-                        "assets": ["projects/test-app/src/favicon.ico", "projects/test-app/src/assets"],
-                        "styles": ["projects/test-app/src/styles.scss"],
+                        "assets": ["projects/showcase/src/favicon.ico", "projects/showcase/src/assets"],
+                        "styles": ["projects/showcase/src/styles.scss"],
                         "scripts": []
                     },
                     "configurations": {
                         "production": {
                             "fileReplacements": [
                                 {
-                                    "replace": "projects/test-app/src/environments/environment.ts",
-                                    "with": "projects/test-app/src/environments/environment.prod.ts"
+                                    "replace": "projects/showcase/src/environments/environment.ts",
+                                    "with": "projects/showcase/src/environments/environment.prod.ts"
                                 }
                             ],
                             "optimization": true,
@@ -62,34 +62,34 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "test-app:build"
+                        "browserTarget": "showcase:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "test-app:build:production"
+                            "browserTarget": "showcase:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "test-app:build"
+                        "browserTarget": "showcase:build"
                     }
                 },
                 "test": {
                     "builder": "@angular-builders/jest:run",
                     "options": {
-                        "configPath": "./projects/test-app/jest.config.js"
+                        "configPath": "./projects/showcase/jest.config.js"
                     }
                 },
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "eslintConfig": "projects/test-app/.eslintrc.js",
+                        "eslintConfig": "projects/showcase/.eslintrc.js",
                         "tsConfig": [
-                            "projects/test-app/tsconfig.app.json",
-                            "projects/test-app/tsconfig.spec.json",
-                            "projects/test-app/e2e/tsconfig.json"
+                            "projects/showcase/tsconfig.app.json",
+                            "projects/showcase/tsconfig.spec.json",
+                            "projects/showcase/e2e/tsconfig.json"
                         ],
                         "exclude": ["**/node_modules/**"]
                     }
@@ -97,12 +97,12 @@
                 "e2e": {
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
-                        "protractorConfig": "projects/test-app/e2e/protractor.conf.js",
-                        "devServerTarget": "test-app:serve"
+                        "protractorConfig": "projects/showcase/e2e/protractor.conf.js",
+                        "devServerTarget": "showcase:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "test-app:serve:production"
+                            "devServerTarget": "showcase:serve:production"
                         }
                     }
                 }
@@ -141,5 +141,5 @@
             }
         }
     },
-    "defaultProject": "test-app"
+    "defaultProject": "showcase"
 }
