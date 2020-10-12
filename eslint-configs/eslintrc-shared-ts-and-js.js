@@ -2,11 +2,11 @@
 'use strict';
 
 module.exports = {
-    plugins: ['eslint-comments', 'import', 'jest', 'prettier', 'jsdoc', 'prefer-arrow'],
+    plugins: ['eslint-comments', 'jest', 'prettier', 'jsdoc', 'prefer-arrow', 'optimize-regex'],
     extends: [
         'eslint:recommended',
+        './eslintrc-import',
         'plugin:eslint-comments/recommended',
-        'plugin:import/recommended',
         'plugin:jsdoc/recommended',
         'prettier',
         'plugin:prettier/recommended'
@@ -14,8 +14,8 @@ module.exports = {
     reportUnusedDisableDirectives: true,
     rules: {
         'eslint-comments/no-unused-disable': 'error',
+        'optimize-regex/optimize-regex': 'warn',
         'block-scoped-var': 'error',
-
         camelcase: 'error',
         complexity: 'error',
         'consistent-return': 'error',
@@ -39,9 +39,8 @@ module.exports = {
             'undefined'
         ],
         'id-match': 'error',
-        'import/no-deprecated': 'warn',
-        'import/order': 'error',
-        'import/no-internal-modules': 'error',
+
+        // 'key-spacing': ['error', { align: 'colon' }],
         'lines-around-comment': [
             'error',
             {
@@ -83,6 +82,7 @@ module.exports = {
         'no-extra-bind': 'error',
         'no-extra-label': 'error',
         'no-floating-decimal': 'error',
+        'no-func-assign': 'error',
         'no-implicit-globals': 'error',
         'no-implied-eval': 'error',
         'no-labels': 'error',
@@ -143,7 +143,8 @@ module.exports = {
         'object-shorthand': ['error', 'always', { avoidQuotes: true, avoidExplicitReturnArrows: true }],
         'one-var': ['error', 'never'],
         'operator-assignment': 'error',
-        'prefer-arrow/prefer-arrow-functions': 'error',
+
+        // 'prefer-arrow/prefer-arrow-functions': 'error',
         'prefer-const': 'error',
         'prefer-destructuring': [
             'error',
@@ -166,7 +167,6 @@ module.exports = {
         'require-atomic-updates': 'error',
         'require-await': 'error',
         'require-unicode-regexp': 'error',
-        'sort-imports': 'error',
         'spaced-comment': [
             'warn',
             'always',

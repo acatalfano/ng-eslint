@@ -6,11 +6,21 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "eslint.run": "onType",
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
     "guides.sendUsagesAndStats": false,
     "eslint.alwaysShowStatus": true,
     "prettier.packageManager": "pnpm",
-    "prettier.printWidth": 120
+    "prettier.printWidth": 120,
+    "eslint.probe": [
+        "javascript",
+        "typescript",
+        "html",
+        "markdown"
+    ],
+    "prettier.singleQuote": true,
+    "eslint.packageManager": "pnpm",
+    "npm.packageManager": "pnpm",
+    "eslint.run": "onSave",
+    "prettier.endOfLine": "crlf"
 }

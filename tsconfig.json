@@ -9,16 +9,14 @@
         //TODO: removed this vvv to get back to initial state
         //"esModuleInterop": true,
         "experimentalDecorators": true,
-        "module": "esnext",
         "moduleResolution": "node",
         "importHelpers": true,
-        "strict": true,
         "target": "es2015",
+        "module": "es2020",
         "typeRoots": ["node_modules/@types"],
         "lib": ["es2018", "dom"],
         "paths": {
-            "lib": ["dist/lib"],
-            "lib/*": ["dist/lib/*"]
+            "lib": ["dist/lib/lib", "dist/lib"]
         }
     },
     //   "exclude": [

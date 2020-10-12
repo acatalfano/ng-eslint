@@ -2,14 +2,14 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
-const { SpecReporter } = require('jasmine-spec-reporter');
+// eslint-disable-next-line import/no-unused-modules
+const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
 
-/* eslint-disable jsdoc/valid-types */
 /**
  * @type { import("protractor").Config }
  */
-/* eslint-enable jsdoc/valid-types */
 exports.config = {
+    // eslint-disable-next-line no-magic-numbers
     allScriptsTimeout: 11000,
     specs: ['./src/**/*.e2e-spec.ts'],
     capabilities: {
@@ -20,13 +20,23 @@ exports.config = {
     framework: 'jasmine',
     jasmineNodeOpts: {
         showColors: true,
+        // eslint-disable-next-line no-magic-numbers
         defaultTimeoutInterval: 30000,
-        print: () => {}
+        // eslint-disable-next-line no-empty-function
+        print() {}
     },
-    onPrepare: () => {
+    onPrepare() {
         require('ts-node').register({
+            // eslint-disable-next-line import/no-nodejs-modules
             project: require('path').join(__dirname, './tsconfig.json')
         });
-        jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+        // eslint-disable-next-line no-undef
+        jasmine.getEnv().addReporter(
+            new SpecReporter({
+                spec: {
+                    displayStacktrace: StacktraceOption.PRETTY
+                }
+            })
+        );
     }
 };
