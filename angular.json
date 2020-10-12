@@ -1,6 +1,9 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "version": 1,
+    "cli": {
+        "packageManager": "pnpm"
+    },
     "newProjectRoot": "projects",
     "projects": {
         "showcase": {
@@ -12,7 +15,7 @@
             },
             "root": "projects/showcase",
             "sourceRoot": "projects/showcase/src",
-            "prefix": "test",
+            "prefix": "app",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
@@ -22,7 +25,7 @@
                         "main": "projects/showcase/src/main.ts",
                         "polyfills": "projects/showcase/src/polyfills.ts",
                         "tsConfig": "projects/showcase/tsconfig.app.json",
-                        "aot": false,
+                        "aot": true,
                         "assets": ["projects/showcase/src/favicon.ico", "projects/showcase/src/assets"],
                         "styles": ["projects/showcase/src/styles.scss"],
                         "scripts": []
@@ -40,7 +43,6 @@
                             "sourceMap": false,
                             "extractCss": true,
                             "namedChunks": false,
-                            "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
                             "buildOptimizer": true,
@@ -112,13 +114,18 @@
             "projectType": "library",
             "root": "projects/lib",
             "sourceRoot": "projects/lib/src",
-            "prefix": "ngx",
+            "prefix": "lib",
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
                     "options": {
                         "tsConfig": "projects/lib/tsconfig.lib.json",
                         "project": "projects/lib/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/lib/tsconfig.lib.prod.json"
+                        }
                     }
                 },
                 "test": {
@@ -131,10 +138,7 @@
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
                         "eslintConfig": "./projects/lib/.eslintrc.js",
-                        "tsConfig": [
-                            "projects/lib/tsconfig.lib.json",
-                            "projects/lib/tsconfig.spec.json"
-                        ],
+                        "tsConfig": ["projects/lib/tsconfig.lib.json", "projects/lib/tsconfig.spec.json"],
                         "exclude": ["**/node_modules/**"]
                     }
                 }

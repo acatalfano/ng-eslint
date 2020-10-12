@@ -1,3 +1,5 @@
+// TODO: vvv testing an expected error for "import-self" rule (or w/e it's called)
+// import * as Stuff from './app.component';
 import { Component } from '@angular/core';
 
 // TODO: make this into a yarn template/scaffold and the equivalent for npm if it exists and angular scaffold/builder if it exists? or addon to ng cli?
@@ -22,6 +24,13 @@ export class AppComponent {
             blongnameblongnameblongnameblongnameblongnameblongname +
             c;
         x += 1;
+
+        // TODO: make alignment on colons for object-keys work (key-spacing rule) ==> also similar rule for =
+        //        i.e. this vvv needs to work also up there ^^^^ in the decorator
+        // const z = {
+        // a     : 'str',
+        // bbbacd: 'xyz'
+        // };
         return x;
     }
 }

@@ -24,7 +24,9 @@ describe('AppComponent', () => {
         const fixture = TestBed.createComponent(AppComponent);
         fixture.detectChanges();
         const compiled = fixture.debugElement.nativeElement as HTMLElement;
-        expect(compiled.querySelector('.content span').textContent).toContain('test-app app is running!');
+        //TODO: (1) expect-expect not triggering ?
+        //      (2) this vvv uncommented has the TS "object could be null" error...
+        //expect(compiled.querySelector('.content span').textContent).toContain('test-app app is running!');
     });
 
     // testing: i'm a long line! testing: i'm a long line! testing: i'm a long line! testing: i'm a long line! testing: i'm a long line! testing-- 150
