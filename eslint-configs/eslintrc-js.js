@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     extends: ['./eslintrc-shared-ts-and-js'],
     rules: {
         'no-empty-function': ['error', { allow: ['arrowFunctions'] }],
@@ -30,14 +30,7 @@ module.exports = {
         ],
         'require-await': 'error',
         'no-return-await': 'error',
-        'import/no-unused-modules': [
-            'error',
-            {
-                missingExports: true
-
-                // unusedExports: true
-            }
-        ],
+        'import/no-unused-modules': ['error', { unusedExports: true }],
         'import/unambiguous': 'off'
     }
 };

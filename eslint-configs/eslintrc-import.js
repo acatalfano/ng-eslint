@@ -22,19 +22,19 @@ module.exports = {
         'import/no-deprecated': 'error',
         'import/no-dynamic-require': 'error',
         'import/no-extraneous-dependencies': 'error',
-        'import/no-internal-modules': 'error',
+        'import/no-internal-modules': ['error', { allow: ['zone.js/dist/zone'] }],
         'import/no-mutable-exports': 'error',
         'import/no-named-default': 'error',
         'import/no-nodejs-modules': 'error',
         'import/no-relative-parent-imports': 'error',
         'import/no-self-import': 'error',
-        'import/no-unassigned-import': 'error',
+        'import/no-unassigned-import': ['error', { allow: ['jest-preset-angular', 'zone.js/dist/zone'] }],
         'import/no-unused-modules': [
             'error',
             {
                 missingExports: true,
                 unusedExports: true,
-                ignoreExports: ['**/*eslintrc*']
+                ignoreExports: ['**/*eslintrc*', '**/*.js', '**/setup-jest.ts']
             }
         ],
         'import/no-useless-path-segments': [

@@ -24,6 +24,7 @@ export class AppComponent {
             blongnameblongnameblongnameblongnameblongnameblongname +
             c;
         x += 1;
+        const d = 'x';
 
         // TODO: make alignment on colons for object-keys work (key-spacing rule) ==> also similar rule for =
         //        i.e. this vvv needs to work also up there ^^^^ in the decorator

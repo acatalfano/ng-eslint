@@ -19,6 +19,7 @@ module.exports = {
     env: {
         browser: true,
         es6: true,
+        //es2021: true,
         node: true
     },
     plugins: [
@@ -26,17 +27,10 @@ module.exports = {
         'eslint-comments', // xxx  all about managing the enable/disable comment directives
         'import',
         'prettier',
-        'jsdoc',
         'prefer-arrow'
     ],
     overrides: [
         {
-            /*
-            TODO:
-            .eslintrc.js#overrides[0] » ./eslint-configs/eslintrc-js: 	Configuration for rule "import/no-unused-modules" is invalid: 	Value {"missingExports":false} should NOT be valid.
-
-            also "invalid prettier config detected" <---- this is due to my comment left in the "package.json" file
-            */
             files: ['*.js'],
             extends: ['./eslint-configs/eslintrc-js']
         },
@@ -55,7 +49,11 @@ module.exports = {
         {
             files: ['*.ts'],
             excludedFiles: ['*.spec.ts', '*-spec.ts'],
-            extends: ['./eslint-configs/eslintrc-ts']
+            extends: ['./eslint-configs/eslintrc-ts'],
+            parserOptions: {
+                tsconfigRootDir: __dirname,
+                project: `${__dirname}/tsconfig.json`
+            }
         },
         {
             files: ['*.spec.ts', '*-spec.ts'],
@@ -65,11 +63,17 @@ module.exports = {
         {
             files: ['**/e2e/**/*.ts', '**/e2e/**/*.js'],
             env: {
-                //jasmine: true
+                // jasmine: true
                 jest: true
             },
             plugins: ['protractor'],
             extends: ['plugin:protractor/recommended']
+        },
+        {
+            files: ['./projects/showcase/src/polyfills.ts'],
+            rules: {
+                'import/no-unused-modules': 'off'
+            }
         }
     ]
 };

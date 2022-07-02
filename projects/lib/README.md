@@ -5,6 +5,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 ## Code scaffolding
 
 Run `ng generate component component-name --project lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project lib`.
+
 > Note: Don't forget to add `--project lib` or else it will be added to the default project in your `angular.json` file.
 
 ## Build
@@ -17,7 +18,7 @@ After building your library with `ng build lib`, go to the dist folder `cd dist/
 
 ## Running unit tests
 
-Run `ng test lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test lib` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## Further help
 

@@ -9,6 +9,7 @@
         //TODO: removed this vvv to get back to initial state
         //"esModuleInterop": true,
         "experimentalDecorators": true,
+        "strictNullChecks": true,
         "moduleResolution": "node",
         "importHelpers": true,
         "target": "es2015",

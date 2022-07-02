@@ -2,12 +2,13 @@
 
 /* eslint-disable no-magic-numbers */
 module.exports = {
-    plugins: ['@angular-eslint'],
+    plugins: ['@angular-eslint', 'jsdoc'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 6,
         project: 'tsconfig.json',
-        tsconfigRootDir: __dirname,
+
+        // tsconfigRootDir: __dirname,
         sourceType: 'module',
         ecmaFeatures: {
             modules: true
@@ -18,8 +19,9 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@angular-eslint/recommended',
-        'plugin:import/typescript',
-        'prettier/@typescript-eslint'
+        'plugin:import/typescript'
+
+        // 'prettier'
     ],
     rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'error',

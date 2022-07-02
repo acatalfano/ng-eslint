@@ -12,12 +12,7 @@
     "eslint.alwaysShowStatus": true,
     "prettier.packageManager": "pnpm",
     "prettier.printWidth": 120,
-    "eslint.probe": [
-        "javascript",
-        "typescript",
-        "html",
-        "markdown"
-    ],
+    "eslint.probe": ["javascript", "typescript", "html", "markdown"],
     "prettier.singleQuote": true,
     "eslint.packageManager": "pnpm",
     "npm.packageManager": "pnpm",

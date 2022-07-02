@@ -7,8 +7,9 @@ module.exports = {
         'eslint:recommended',
         './eslintrc-import',
         'plugin:eslint-comments/recommended',
-        'plugin:jsdoc/recommended',
-        'prettier',
+
+        // 'plugin:jsdoc/recommended',
+        // 'prettier',
         'plugin:prettier/recommended'
     ],
     reportUnusedDisableDirectives: true,
@@ -60,9 +61,10 @@ module.exports = {
             }
         ],
         'no-alert': 'error',
-        'jsdoc/check-alignment': 'error',
-        'jsdoc/newline-after-description': 'error',
-        'jsdoc/no-types': 'error',
+
+        // 'jsdoc/check-alignment': 'error',
+        // 'jsdoc/newline-after-description': 'error',
+        // 'jsdoc/no-types': 'error',
         'max-classes-per-file': 'error',
         'max-statements-per-line': 'error',
         'no-bitwise': 'error',
@@ -139,7 +141,8 @@ module.exports = {
         'no-useless-return': 'error',
         'no-var': 'error',
         'no-void': 'error',
-        'no-warning-comments': 'error',
+
+        // 'no-warning-comments': 'error',
         'object-shorthand': ['error', 'always', { avoidQuotes: true, avoidExplicitReturnArrows: true }],
         'one-var': ['error', 'never'],
         'operator-assignment': 'error',
