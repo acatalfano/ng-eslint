@@ -45,5 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Angular cache
-.angular/cache
+# Includes Angular cache
+.angular
