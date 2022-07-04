@@ -1,3 +1,7 @@
 {
-    "plugins": ["transform-modules-commonjs"]
+    "plugins": ["transform-modules-commonjs"],
+    "presets": [
+        "preset-typescript",
+        "preset-env"
+    ]
 }
