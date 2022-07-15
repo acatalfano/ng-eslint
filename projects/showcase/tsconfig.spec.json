@@ -1,11 +1,11 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        //TODO: removed this vvv to get back to initial state
-        //"emitDecoratorMetadata": true,
-        "outDir": "../../out-tsc/spec",
-        "types": ["jest", "node"]
+        "outDir": "./out-tsc/spec",
+        "types": ["jest", "node"],
+        "esModuleInterop": true,
+        "allowJs": true
     },
     "files": ["src/polyfills.ts"],
-    "include": ["src/**/*.spec.ts", "src/**/*-spec.ts", "src/**/*.d.ts"]
+    "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }
